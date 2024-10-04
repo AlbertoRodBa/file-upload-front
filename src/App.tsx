@@ -63,11 +63,15 @@ const App: React.FC = () => {
   return (
     <div className="container">
       <h1>Gestor de Archivos</h1>
+      <label htmlFor="file-upload" className="button">
+        Seleccionar Archivos
+      </label>
       <input
+        id="file-upload"
         type="file"
         multiple
         onChange={handleFileChange}
-        style={{ marginBottom: '20px' }}
+        style={{ display: 'none' }} // Ocultar el input
       />
       <h2>Archivos Cargados:</h2>
       <ul>
@@ -75,7 +79,7 @@ const App: React.FC = () => {
           <li key={index}>
             {getFilePreview(file)}
             <span style={{ marginLeft: '10px' }}>{file.name}</span>
-            <button onClick={() => handleRemoveFile(index)}>Eliminar</button>
+            <button className="remove-button" onClick={() => handleRemoveFile(index)}>Eliminar</button>
           </li>
         ))}
       </ul>

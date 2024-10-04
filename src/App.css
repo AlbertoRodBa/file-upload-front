@@ -22,24 +22,31 @@ body {
 }
 
 h1 {
-  color: #87CEEB; /* Título en celeste claro */
+  color: #cdecf9; /* Título en celeste claro */
   font-size: 26px;
   margin-bottom: 10px;
 }
 
 h2 {
   margin-top: 20px;
-  color: #87CEEB; /* Subtítulo en celeste claro */
+  color: #cdecf9; /* Subtítulo en celeste claro */
 }
 
-.file-input {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #87CEEB; /* Borde celeste claro */
-  border-radius: 4px;
-  width: 100%; /* Ocupa todo el ancho */
-  background: #3a3a3a; /* Fondo de la entrada */
-  color: #fff; /* Texto blanco */
+/* Estilo para el botón de selección de archivos */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #003366; /* Azul marino */
+  color: white; /* Texto blanco */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+.button:hover {
+  background-color: #002244; /* Cambia a un azul más oscuro al pasar el mouse */
 }
 
 .file-list {
@@ -65,7 +72,7 @@ h2 {
 
 .file-name {
   margin-left: 10px;
-  color: #87CEEB; /* Texto celeste claro para el nombre del archivo */
+  color: #cdecf9; /* Texto celeste claro para el nombre del archivo */
   flex-grow: 1; /* Para ocupar espacio disponible */
 }
 
@@ -75,9 +82,10 @@ h2 {
   border-radius: 5px;
 }
 
+/* Cambia aquí para el botón de eliminar */
 .remove-button {
-  background-color: #ff4c4c;
-  color: white;
+  background-color: #003366; /* Azul marino */
+  color: white; /* Texto blanco */
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -86,5 +94,5 @@ h2 {
 }
 
 .remove-button:hover {
-  background-color: #ff1c1c; /* Cambia el color al pasar el mouse */
+  background-color: #002244; /* Cambia a un azul más oscuro al pasar el mouse */
 }
