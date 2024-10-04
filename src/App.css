@@ -1,52 +1,49 @@
-/* App.css */
-
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #1c1c1c; /* Fondo gris oscuro */
-  color: #87CEEB; /* Texto celeste claro */
+  background-color: #1c1c1c;
+  color: #87CEEB;
   margin: 0;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Centrado vertical */
+  min-height: 100vh;
 }
 
 .container {
-  background: #282828; /* Fondo del contenedor */
+  background: #282828;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   padding: 20px;
   width: 90%;
-  max-width: 600px; /* Ancho máximo */
+  max-width: 600px;
 }
 
 h1 {
-  color: #cdecf9; /* Título en celeste claro */
+  color: #cdecf9;
   font-size: 26px;
   margin-bottom: 10px;
 }
 
 h2 {
   margin-top: 20px;
-  color: #cdecf9; /* Subtítulo en celeste claro */
+  color: #cdecf9;
 }
 
-/* Estilo para el botón de selección de archivos */
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #003366; /* Azul marino */
-  color: white; /* Texto blanco */
+  background-color: #003366;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
-  margin-bottom: 20px; /* Margen inferior */
+  margin-bottom: 20px;
 }
 
 .button:hover {
-  background-color: #002244; /* Cambia a un azul más oscuro al pasar el mouse */
+  background-color: #002244;
 }
 
 .file-list {
@@ -55,25 +52,25 @@ h2 {
 }
 
 .file-item {
-  background: #383838; /* Fondo de los elementos de la lista */
+  background: #383838;
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-  transition: background-color 0.2s; /* Transición suave */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
 }
 
 .file-item:hover {
-  background: #484848; /* Cambia el fondo al pasar el mouse */
+  background: #484848;
 }
 
 .file-name {
   margin-left: 10px;
-  color: #cdecf9; /* Texto celeste claro para el nombre del archivo */
-  flex-grow: 1; /* Para ocupar espacio disponible */
+  color: #cdecf9;
+  flex-grow: 1;
 }
 
 .file-preview {
@@ -82,10 +79,9 @@ h2 {
   border-radius: 5px;
 }
 
-/* Cambia aquí para el botón de eliminar */
 .remove-button {
-  background-color: #003366; /* Azul marino */
-  color: white; /* Texto blanco */
+  background-color: #003366;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -94,5 +90,22 @@ h2 {
 }
 
 .remove-button:hover {
-  background-color: #002244; /* Cambia a un azul más oscuro al pasar el mouse */
+  background-color: #002244;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #112943; /* Celeste, similar al primary de Bootstrap */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+  background-color: #0056b3;
 }

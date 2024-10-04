@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './App.css'; // Importa el archivo CSS
+import './App.css'; 
 
 const App: React.FC = () => {
   const [files, setFiles] = useState<File[]>([]);
 
-  // Carga los archivos desde el Local Storage al iniciar la aplicación
   useEffect(() => {
     const storedFiles = localStorage.getItem('files');
     if (storedFiles) {
@@ -12,7 +11,6 @@ const App: React.FC = () => {
     }
   }, []);
 
-  // Guarda los archivos en el Local Storage cuando cambian
   useEffect(() => {
     localStorage.setItem('files', JSON.stringify(files));
   }, [files]);
@@ -26,37 +24,48 @@ const App: React.FC = () => {
     setFiles(files.filter((_, i) => i !== index));
   };
 
-  // Función para obtener la vista previa del archivo
+  // Simulación de subida de archivos
+  const handleUploadFiles = () => {
+    if (files.length === 0) {
+      alert('No hay archivos para subir.');
+      return;
+    }
+
+    // Simulación de proceso de subida
+    setTimeout(() => {
+      alert('Archivos "subidos" exitosamente (simulado).');
+    }, 1000); // Simula un retraso de subida
+  };
+
   const getFilePreview = (file: File) => {
-    const fileType = file.type.split('/')[0]; // Obtiene el tipo de archivo
-    const fileUrl = URL.createObjectURL(file); // Crea una URL para el archivo
+    const fileType = file.type.split('/')[0];
+    const fileUrl = URL.createObjectURL(file);
 
     if (fileType === 'image') {
       return <img src={fileUrl} alt={file.name} style={{ width: '50px', height: '50px', borderRadius: '5px' }} />;
     }
 
-    return <span>{getFileIcon(file.name)}</span>; // Si no es una imagen, muestra un ícono
+    return <span>{getFileIcon(file.name)}</span>;
   };
 
-  // Función para devolver un ícono según la extensión del archivo
   const getFileIcon = (fileName: string) => {
     const extension = fileName.split('.').pop();
     switch (extension) {
       case 'pdf':
-        return '📄'; // Ícono para PDF
+        return '📄';
       case 'doc':
       case 'docx':
-        return '📝'; // Ícono para Word
+        return '📝';
       case 'ppt':
       case 'pptx':
-        return '📊'; // Ícono para PowerPoint
+        return '📊';
       case 'xls':
       case 'xlsx':
-        return '📈'; // Ícono para Excel
+        return '📈';
       case 'txt':
-        return '🗒️'; // Ícono para Texto
+        return '🗒️';
       default:
-        return '📁'; // Ícono genérico
+        return '📁';
     }
   };
 
@@ -71,7 +80,7 @@ const App: React.FC = () => {
         type="file"
         multiple
         onChange={handleFileChange}
-        style={{ display: 'none' }} // Ocultar el input
+        style={{ display: 'none' }}
       />
       <h2>Archivos Cargados:</h2>
       <ul>
@@ -83,6 +92,7 @@ const App: React.FC = () => {
           </li>
         ))}
       </ul>
+      <button className="upload-button" onClick={handleUploadFiles}>Subir Archivos</button>
     </div>
   );
 };
