@@ -1,0 +1,90 @@
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c; /* Fondo gris oscuro */
+  color: #87CEEB; /* Texto celeste claro */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Centrado vertical */
+}
+
+.container {
+  background: #282828; /* Fondo del contenedor */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 90%;
+  max-width: 600px; /* Ancho máximo */
+}
+
+h1 {
+  color: #87CEEB; /* Título en celeste claro */
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #87CEEB; /* Subtítulo en celeste claro */
+}
+
+.file-input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #87CEEB; /* Borde celeste claro */
+  border-radius: 4px;
+  width: 100%; /* Ocupa todo el ancho */
+  background: #3a3a3a; /* Fondo de la entrada */
+  color: #fff; /* Texto blanco */
+}
+
+.file-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.file-item {
+  background: #383838; /* Fondo de los elementos de la lista */
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: background-color 0.2s; /* Transición suave */
+}
+
+.file-item:hover {
+  background: #484848; /* Cambia el fondo al pasar el mouse */
+}
+
+.file-name {
+  margin-left: 10px;
+  color: #87CEEB; /* Texto celeste claro para el nombre del archivo */
+  flex-grow: 1; /* Para ocupar espacio disponible */
+}
+
+.file-preview {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.remove-button {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+.remove-button:hover {
+  background-color: #ff1c1c; /* Cambia el color al pasar el mouse */
+}
